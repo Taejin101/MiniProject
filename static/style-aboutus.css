@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Yeon+Sung&display=swap');
+
+*{
+    margin :0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto',sans-serif;
+    font-family: 'Dancing Script', cursive;
+}
+
+/* .container::before{
+    content: "";
+    position: absolute;
+    background: url(../static/img/temp.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 76px;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: -1;
+} */
+
+.container {
+    display: flex;
+    background: url(../static/img/temp.jpg);
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: slide-up 4s;
+    animation-delay: 100ms;
+    animation-fill-mode: forwards;
+    text-align: center;
+    color: white;
+    height: 100vh;
+}
+
+@keyframes slide-up{
+    from{
+        opacity: 0.1;
+        line-height: 300px;
+    }
+    to{
+        opacity: 1;
+        line-height: 50px;
+    }
+}
+
+h1 {
+    font-weight: bold;
+    margin-bottom: 2rem;
+    /* animation: color-change 5s; */
+    /* transition: all 2s; */
+}
+
+.image {
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+    filter: invert();
+}
+
+p {
+    margin-bottom: 5rem;
+}
+
+p img{
+    display: inline-block;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.1rem 1.2rem;
+    background: #e52323;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #5842a3;
+}
