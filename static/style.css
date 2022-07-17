@@ -183,11 +183,11 @@
     bottom: 0;
     right: 0;
     left: 0; */
-    height: 5vh;
+    height: 40px;
     color: white;
     background-color: #000000c2;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     font-size: 20px;
 }

@@ -1,13 +1,13 @@
-const express=require('express');    // import express module
-const path=require('path');          // import path module
-const app=express();                 // create an express application
-const mongoose = require('mongoose');// for connecting database
+const express=require('express');       // import express module
+const path=require('path');             // import path module
+const app=express();                    // create an express application
+const mongoose = require('mongoose');   // for connecting database
 const bodyparser = require('body-parser');
 
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://localhost:27017/contactDance');
+   mongoose.connect('mongodb://localhost:27017/contactDance');
 }
 
 const port = 80;
@@ -31,7 +31,7 @@ app.set('views',path.join(__dirname,'views'));  // set up views directory
 
 // ENDPOINTS
 app.get('/about', (req,res)=>{
-    res.status(200).render('about.pug');
+    res.status(404).render('about.pug');
 });
 app.get('/', (req,res)=>{
     res.status(200).render('home.pug');
